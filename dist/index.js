@@ -44,6 +44,9 @@ const defaultTextOnLine = 'Yes';
 const defaultTextOffPill = 'off';
 const defaultTextOnPill = 'on';
 const defaultTextSize = 14;
+const defaultTextStyle = {};
+const defaultLeftTextStyle = {};
+const defaultRightTextStyle = {};
 class Switches extends React.PureComponent {
     constructor(props) {
         super(props);
@@ -71,6 +74,9 @@ class Switches extends React.PureComponent {
             const showText = this.props.showText === false ? this.props.showText : defaultShowText;
             const borderWidth = this.props.borderWidth ? this.props.borderWidth : defaultBorderWidth;
             const borderColor = this.props.borderColor ? this.props.borderColor : defaultBorderColor;
+            const textStyle = this.props.textStyle ? this.props.textStyle : defaultTextStyle;
+            const leftTextStyle = this.props.leftTextStyle ? this.props.leftTextStyle : defaultLeftTextStyle;
+            const rightTextStyle = this.props.rightTextStyle ? this.props.rightTextStyle : defaultRightTextStyle;
             return (React.createElement(react_move_1.Animate, { show: true, start: {
                     colorNo: this.props.value ? colorTextOff : colorTextOn,
                     colorYes: this.props.value ? colorTextOn : colorTextOff,
@@ -171,14 +177,14 @@ class Switches extends React.PureComponent {
                                         color: colorTextOn,
                                         marginRight: spaceBetween / 2,
                                         opacity: state.opacityTextOn
-                                    }, ...this.props.textStyle, ...this.props.leftTextStyle] }, textOn),
+                                    }, textStyle, leftTextStyle] }, textOn),
                                 React.createElement(react_native_1.Text, { style: [{
                                         fontFamily: textFont,
                                         fontSize: textSize,
                                         color: colorTextOff,
                                         marginLeft: spaceBetween / 2,
                                         opacity: state.opacityTextOff
-                                    }, ...this.props.textStyle, ...this.props.rightTextStyle] }, textOff)),
+                                    }, textStyle, rightTextStyle] }, textOff)),
                         React.createElement(react_native_1.View, { style: {
                                 left: state.positionButton,
                                 position: 'absolute',
