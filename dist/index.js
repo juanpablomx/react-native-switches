@@ -165,20 +165,20 @@ class Switches extends React.PureComponent {
                                     paddingLeft: paddingTextOn,
                                     paddingRight: paddingTextOff
                                 } },
-                                React.createElement(react_native_1.Text, { style: {
+                                React.createElement(react_native_1.Text, { style: [{
                                         fontFamily: textFont,
                                         fontSize: textSize,
                                         color: colorTextOn,
                                         marginRight: spaceBetween / 2,
                                         opacity: state.opacityTextOn
-                                    } }, textOn),
-                                React.createElement(react_native_1.Text, { style: {
+                                    }, ...this.props.textStyle, ...this.props.leftTextStyle] }, textOn),
+                                React.createElement(react_native_1.Text, { style: [{
                                         fontFamily: textFont,
                                         fontSize: textSize,
                                         color: colorTextOff,
                                         marginLeft: spaceBetween / 2,
                                         opacity: state.opacityTextOff
-                                    } }, textOff)),
+                                    }, ...this.props.textStyle, ...this.props.rightTextStyle] }, textOff)),
                         React.createElement(react_native_1.View, { style: {
                                 left: state.positionButton,
                                 position: 'absolute',
