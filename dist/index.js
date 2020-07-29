@@ -74,9 +74,7 @@ class Switches extends React.PureComponent {
             const showText = this.props.showText === false ? this.props.showText : defaultShowText;
             const borderWidth = this.props.borderWidth ? this.props.borderWidth : defaultBorderWidth;
             const borderColor = this.props.borderColor ? this.props.borderColor : defaultBorderColor;
-            const textStyle = this.props.textStyle ? this.props.textStyle : defaultTextStyle;
-            const leftTextStyle = this.props.leftTextStyle ? this.props.leftTextStyle : defaultLeftTextStyle;
-            const rightTextStyle = this.props.rightTextStyle ? this.props.rightTextStyle : defaultRightTextStyle;
+            
             return (React.createElement(react_move_1.Animate, { show: true, start: {
                     colorNo: this.props.value ? colorTextOff : colorTextOn,
                     colorYes: this.props.value ? colorTextOn : colorTextOff,
@@ -138,6 +136,9 @@ class Switches extends React.PureComponent {
             const icon = this.props.icon ? this.props.icon : null;
             const paddingTextOn = this.props.paddingTextOn || defaultPaddingTextOn;
             const paddingTextOff = this.props.paddingTextOff || defaultPaddingTextOff;
+            const textStyle = this.props.textStyle ? this.props.textStyle : defaultTextStyle;
+            const leftTextStyle = this.props.leftTextStyle ? this.props.leftTextStyle : defaultLeftTextStyle;
+            const rightTextStyle = this.props.rightTextStyle ? this.props.rightTextStyle : defaultRightTextStyle;
             return (React.createElement(react_move_1.Animate, { show: true, start: {
                     color: `${this.props.value ? onColor : offColor}`,
                     positionButton: this.props.value ? rightPosition : leftPosition,
